@@ -17,7 +17,7 @@ var shell           = require('gulp-shell');
 gulp.task('browserSync', function() {
     browserSync({
         server: {
-            baseDir: "src/"
+            baseDir: 'src/'
         },
         options: {
             reloadDelay: 250
@@ -26,7 +26,7 @@ gulp.task('browserSync', function() {
     });
 });
 
-// JS compilation
+// JS compilation for development
 
 gulp.task('scripts', function() {
     
@@ -47,7 +47,25 @@ gulp.task('scripts', function() {
         .pipe(browserSync.reload({stream: true}));
 });
 
-// SCSS compilation
+// JS compilation for deployment
+
+gulp.task('scripts-prod', function() {
+    
+    // JS file locations
+
+    return gulp.src(['src/js/**/*.js'])
+
+        // concatenated version of js files
+        .pipe(concat('script.js'))
+
+        // compress JS code
+        .pipe(uglify())
+
+        // location of concatenated script
+        .pipe(gulp.dest('dist'))
+});
+
+// SCSS compilation for development
 
 gulp.task('styles', function () {
 
@@ -72,7 +90,29 @@ gulp.task('styles', function () {
         .pipe(browserSync.reload({stream: true}));;
 });
 
-// HTML compilation
+// SCSS compilation for deployment
+
+gulp.task('styles-prod', function () {
+
+    // grab all scss files
+
+    return gulp.src('src/styles/**/*.scss')
+
+        .pipe(sass())
+
+        .pipe(autoprefixer())
+
+        // concatenated version of css files
+        .pipe(concat('styles.css'))
+
+        // compress CSS code
+        .pipe(csso())
+
+        // location of css file
+        .pipe(gulp.dest('dist'))
+});
+
+// HTML compilation for development
 
 gulp.task('html', function() {
 
@@ -87,6 +127,18 @@ gulp.task('html', function() {
 
 });
 
+// HTML compilation for deployment
+
+gulp.task('html-prod', function() {
+
+    // watch all HTML files and refresh when something changes
+    return gulp.src('src/*.html')
+
+        // stream files to dist folder        
+        .pipe(gulp.dest('dist'))
+
+});
+
 // delete dist folder if present
 
 gulp.task('clean', function() {
@@ -97,27 +149,39 @@ gulp.task('clean', function() {
 
 // create dist folder
 
-gulp.task('deploy', function() {
+gulp.task('scaffold', function() {
     return shell.task([
         'mkdir dist'
         ]
     );
 });
 
-// set up watch task
+// set up default development run
 
-gulp.task('watch', function() {
-    
-    // set up gulp watch for js files    
-    gulp.watch('src/js/**', ['scripts']);
-    
-    // set up gulp watch for scss files    
-    gulp.watch('src/scss/**', ['styles']);
+gulp.task(
+    'default',
+    ['browserSync', 'scripts', 'styles', 'html'],
+    function() {
+        
+        // set up gulp watch for js files    
+        gulp.watch('src/js/**', ['scripts']);
+        
+        // set up gulp watch for scss files    
+        gulp.watch('src/scss/**', ['styles']);
 
-    // set up gulp watch for html files    
-    gulp.watch('src/*.html', ['html']);
+        // set up gulp watch for html files    
+        gulp.watch('src/*.html', ['html']);
 
-})
+    }
+);
 
-gulp.task('default', gulpSequence('clean', 'deploy', ['browserSync', 'scripts', 'styles', 'html'], 'watch'));
+// set up deployment run
 
+gulp.task(
+    'deploy',
+    gulpSequence(
+        'clean',
+        'scaffold',
+        ['scripts-prod', 'styles-prod', 'html-prod']
+    )
+);
