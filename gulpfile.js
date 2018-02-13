@@ -86,3 +86,20 @@ gulp.task('html', function() {
         .pipe(browserSync.reload({stream: true}))
 
 });
+
+// delete dist folder if present
+
+gulp.task('clean', function() {
+    return shell.task([
+        'rm -rf dist'
+    ]);
+});
+
+// create dist folder
+
+gulp.task('deploy', function() {
+    return shell.task([
+        'mkdir dist'
+        ]
+    );
+});
