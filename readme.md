@@ -1,3 +1,5 @@
+[![buddy pipeline](https://app.buddy.works/builtforfifty/amiculum-fed-assignment/pipelines/pipeline/125098/badge.svg?token=b4cc1ef3fb8ac1b8e9672c03dd98328fb48bd87e72d523c4e8a4a5af5d822321 "buddy pipeline")](https://app.buddy.works/builtforfifty/amiculum-fed-assignment/pipelines/pipeline/125098)
+
 Repository for Amiculum Front End Development Assignment
 ========================================================
 
