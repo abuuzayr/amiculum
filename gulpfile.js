@@ -71,3 +71,18 @@ gulp.task('styles', function () {
         // notify browserSync to reload
         .pipe(browserSync.reload({stream: true}));;
 });
+
+// HTML compilation
+
+gulp.task('html', function() {
+
+    // watch all HTML files and refresh when something changes
+    return gulp.src('src/*.html')
+
+        // stream files to dist folder        
+        .pipe(gulp.dest('dist'))
+
+        // notify browserSync to reload for any file changes
+        .pipe(browserSync.reload({stream: true}))
+
+});
