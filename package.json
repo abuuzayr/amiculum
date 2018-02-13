@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/abuuzayr/amiculum-fed-assignment#readme",
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1"
   }
 }
