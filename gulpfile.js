@@ -32,7 +32,12 @@ gulp.task('scripts', function() {
     
     // JS file locations
 
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'src/js/**/*.js'])
+    return gulp.src([
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/popper.js/dist/js/popper.min.js',
+            'src/js/**/*.js'
+        ])
 
         // concatenated version of js files
         .pipe(concat('script.js'))
@@ -53,7 +58,12 @@ gulp.task('scripts-prod', function() {
     
     // JS file locations
 
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'src/js/**/*.js'])
+    return gulp.src([
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/jquery/dist/jquery.min.js',
+            'node_modules/popper.js/dist/js/popper.min.js',
+            'src/js/**/*.js'
+        ])
 
         // concatenated version of js files
         .pipe(concat('script.js'))
