@@ -17,7 +17,7 @@ var shell           = require('gulp-shell');
 gulp.task('browserSync', function() {
     browserSync({
         server: {
-            baseDir: 'src/'
+            baseDir: 'dist/'
         },
         options: {
             reloadDelay: 250
