@@ -25,3 +25,24 @@ gulp.task('browserSync', function() {
         notify: false
     });
 });
+
+// JS compilation
+
+gulp.task('scripts', function() {
+    
+    // JS file locations
+
+    return gulp.src(['src/js/**/*.js'])
+
+        // concatenated version of js files
+        .pipe(concat('script.js'))
+
+        // compress JS code
+        .pipe(uglify())
+
+        // location of concatenated script
+        .pipe(gulp.dest('dist'))
+
+        // notify browserSync to reload
+        .pipe(browserSync.reload({stream: true}));
+});
