@@ -31,5 +31,8 @@
     "last 1 edge versions",
     "last 1 firefox versions",
     "last 1 ios_saf versions"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
 }
