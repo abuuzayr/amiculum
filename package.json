@@ -14,7 +14,6 @@
   "homepage": "https://github.com/abuuzayr/amiculum-fed-assignment#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
@@ -31,5 +30,8 @@
     "last 1 edge versions",
     "last 1 firefox versions",
     "last 1 ios_saf versions"
-  ]
+  ],
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
 }
