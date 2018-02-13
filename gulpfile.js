@@ -118,3 +118,6 @@ gulp.task('watch', function() {
     gulp.watch('src/*.html', ['html']);
 
 })
+
+gulp.task('default', gulpSequence('clean', 'deploy', ['browserSync', 'scripts', 'styles', 'html'], 'watch'));
+
