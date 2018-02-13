@@ -71,7 +71,7 @@ gulp.task('styles', function () {
 
     // grab all scss files
 
-    return gulp.src('src/styles/**/*.scss')
+    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/styles/**/*.scss'])
 
         .pipe(sass().on('error', sass.logError))
 
@@ -96,7 +96,7 @@ gulp.task('styles-prod', function () {
 
     // grab all scss files
 
-    return gulp.src('src/styles/**/*.scss')
+    return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/styles/**/*.scss'])
 
         .pipe(sass())
 
