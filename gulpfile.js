@@ -103,3 +103,18 @@ gulp.task('deploy', function() {
         ]
     );
 });
+
+// set up watch task
+
+gulp.task('watch', function() {
+    
+    // set up gulp watch for js files    
+    gulp.watch('src/js/**', ['scripts']);
+    
+    // set up gulp watch for scss files    
+    gulp.watch('src/scss/**', ['styles']);
+
+    // set up gulp watch for html files    
+    gulp.watch('src/*.html', ['html']);
+
+})
