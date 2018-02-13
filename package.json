@@ -1,0 +1,15 @@
+{
+  "name": "amiculum-fed-assignment",
+  "version": "1.0.0",
+  "description": "Amiculum Front End Development Assignment",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abuuzayr/amiculum-fed-assignment.git"
+  },
+  "author": "Abu Uzayr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abuuzayr/amiculum-fed-assignment/issues"
+  },
+  "homepage": "https://github.com/abuuzayr/amiculum-fed-assignment#readme"
+}
