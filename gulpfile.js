@@ -9,3 +9,14 @@ var imagemin        = require('gulp-imagemin');
 var minifyCSS       = require('gulp-csso');
 var browserSync     = require('browser-sync');
 var autoprefixer    = require('gulp-autoprefixer');
+
+// add browser list for autoprefix
+
+var autoprefixList = [
+  'last 2 version',
+  'Android',
+  'Chrome',
+  'Edge',
+  'Firefox',
+  'iOS',
+];
