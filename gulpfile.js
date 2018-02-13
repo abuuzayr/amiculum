@@ -46,3 +46,28 @@ gulp.task('scripts', function() {
         // notify browserSync to reload
         .pipe(browserSync.reload({stream: true}));
 });
+
+// SCSS compilation
+
+gulp.task('styles', function () {
+
+    // grab all scss files
+
+    return gulp.src('src/styles/**/*.scss')
+
+        .pipe(sass().on('error', sass.logError))
+
+        .pipe(autoprefixer())
+
+        // concatenated version of css files
+        .pipe(concat('styles.css'))
+
+        // compress CSS code
+        .pipe(csso())
+
+        // location of css file
+        .pipe(gulp.dest('dist'))
+
+        // notify browserSync to reload
+        .pipe(browserSync.reload({stream: true}));;
+});
