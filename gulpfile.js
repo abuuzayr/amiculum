@@ -10,6 +10,7 @@ var browserSync     = require('browser-sync');
 var autoprefixer    = require('gulp-autoprefixer');
 var stripComments   = require('gulp-strip-comments');
 var gulpSequence    = require('gulp-sequence');
+var shell           = require('gulp-shell');
 
 // add browser list for autoprefix
 
