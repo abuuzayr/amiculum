@@ -167,7 +167,7 @@ gulp.task(
         gulp.watch('src/js/**', ['scripts']);
         
         // set up gulp watch for scss files    
-        gulp.watch('src/scss/**', ['styles']);
+        gulp.watch('src/styles/**', ['styles']);
 
         // set up gulp watch for html files    
         gulp.watch('src/*.html', ['html']);
