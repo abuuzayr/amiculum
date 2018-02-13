@@ -11,3 +11,17 @@ var autoprefixer    = require('gulp-autoprefixer');
 var stripComments   = require('gulp-strip-comments');
 var gulpSequence    = require('gulp-sequence');
 var shell           = require('gulp-shell');
+
+// BrowserSync configuration
+
+gulp.task('browserSync', function() {
+    browserSync({
+        server: {
+            baseDir: "src/"
+        },
+        options: {
+            reloadDelay: 250
+        },
+        notify: false
+    });
+});
