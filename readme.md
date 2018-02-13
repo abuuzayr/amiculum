@@ -19,6 +19,9 @@ Tools
 - [autoprefixer](https://github.com/postcss/autoprefixer)
 - [Buddy](https://buddy.works/)
 - [gulp-concat](https://github.com/contra/gulp-concat)
+- [gulp-strip-comments](https://github.com/RnbWd/gulp-strip-comments)
+- [gulp-shell](https://github.com/sun-zheng-an/gulp-shell)
+- [gulp-sequence](https://github.com/teambition/gulp-sequence)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 Deployment
@@ -37,7 +40,7 @@ Developers
 There are 2 ways to trace the paths taken when building this site:
 
 - via commit messages - micro-commit method was preferred for this purpose
-- via comments in code - gulp-strip-comments remove comments in code, so please refer to the comments in this repository and not in the source code in the browser
+- via comments in code - `gulp-strip-comments` removes comments in code, so please refer to the comments in this repository and not in the source code in the browser
 
 Testing
 -------
