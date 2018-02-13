@@ -24,5 +24,12 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-strip-comments": "^2.5.2",
     "gulp-uglify": "^3.0.0"
-  }
+  },
+  "browserslist": [
+    "last 1 and_chr versions",
+    "last 1 chrome versions",
+    "last 1 edge versions",
+    "last 1 firefox versions",
+    "last 1 ios_saf versions"
+  ]
 }
