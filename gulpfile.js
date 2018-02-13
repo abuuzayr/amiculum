@@ -9,6 +9,7 @@ var minifyCSS       = require('gulp-csso');
 var browserSync     = require('browser-sync');
 var autoprefixer    = require('gulp-autoprefixer');
 var stripComments   = require('gulp-strip-comments');
+var gulpSequence    = require('gulp-sequence');
 
 // add browser list for autoprefix
 
