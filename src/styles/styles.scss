@@ -120,3 +120,12 @@ nav {
         right: 0;
     }
 }
+
+// grid styling
+
+.grid .row + .row {
+    margin-top: 30px;
+}
+        background: $bo-img-grey;
+    }
+}
