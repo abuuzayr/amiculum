@@ -1,16 +1,20 @@
 // Initialise main color variables
 
-$bg-grey        :#1A1A1A;
-$img-grey       :#2E2E2E;
-$font-grey      :#959595;
-$img-font-grey  :#525252;
-$hr-grey        :#2A2A2A;
+$bg-grey        : #1A1A1A;
+$img-grey       : #2E2E2E;
+$font-grey      : #959595;
+$img-font-grey  : #525252;
+$hr-grey        : #2A2A2A;
 
 // Initialise breakout area color variables
 
-$bo-img-grey    :#E6E6E6;
-$bo-header-grey :#3A3A3A;
-$bo-font-grey   :#B3B3B3;
+$bo-img-grey    : #E6E6E6;
+$bo-header-grey : #3A3A3A;
+$bo-font-grey   : #B3B3B3;
+
+// Set page dimensions
+
+$boxed-width    : 960px;
 
 // Style base structure classes
 
@@ -30,9 +34,14 @@ h1 {
 // Main content section
 
 main {
-    width: 960px;
-    section {
-        margin: 30px 0;
+    .white-bg {
+        background: white;
+    }
+    section, nav {
+        width: $boxed-width;
+    }
+    section + section {
+        margin-top: 50px;
     }
 }
 
