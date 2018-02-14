@@ -140,3 +140,14 @@ nav {
     text-align: right;
     padding: 20px 0px;
 }
+
+// breakout section
+
+.breakout {
+    text-align: left;
+    padding: 3rem 0 0;
+    margin: 3rem;
+    .img-half {
+        background: $bo-img-grey;
+    }
+}
