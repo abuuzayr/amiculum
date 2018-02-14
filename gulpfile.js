@@ -8,7 +8,7 @@ var sourceMaps      = require('gulp-sourcemaps');
 var csso            = require('gulp-csso');
 var browserSync     = require('browser-sync');
 var autoprefixer    = require('gulp-autoprefixer');
-var strip           = require('gulp-strip-comments');
+var decomment       = require('gulp-decomment');
 var gulpSequence    = require('gulp-sequence');
 var shell           = require('gulp-shell');
 
@@ -66,7 +66,7 @@ gulp.task('scripts-prod', function() {
         ])
 
         // strip all comments
-        .pipe(strip())
+        .pipe(decomment({trim: true}))
 
         // concatenated version of js files
         .pipe(concat('script.js'))
@@ -86,8 +86,10 @@ gulp.task('styles', function () {
 
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/styles/**/*.scss'])
 
+        // convert scss to css
         .pipe(sass().on('error', sass.logError))
 
+        // add autoprefixing based on browserlist in package.json
         .pipe(autoprefixer())
 
         // concatenated version of css files
@@ -111,11 +113,10 @@ gulp.task('styles-prod', function () {
 
     return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'src/styles/**/*.scss'])
 
-        // strip all comments
-        .pipe(strip())
-
+        // convert scss to css
         .pipe(sass())
 
+        // add autoprefixing based on browserlist in package.json
         .pipe(autoprefixer())
 
         // concatenated version of css files
@@ -151,7 +152,7 @@ gulp.task('html-prod', function() {
     return gulp.src('src/*.html')
 
         // strip all comments
-        .pipe(strip())
+        .pipe(decomment({trim: true}))
 
         // stream files to dist folder        
         .pipe(gulp.dest('dist'))
