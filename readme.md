@@ -19,7 +19,7 @@ Tools
 - [autoprefixer](https://github.com/postcss/autoprefixer)
 - [Buddy](https://buddy.works/)
 - [gulp-concat](https://github.com/contra/gulp-concat)
-- [gulp-strip-comments](https://github.com/RnbWd/gulp-strip-comments)
+- [gulp-decomment](https://github.com/vitaly-t/gulp-decomment)
 - [gulp-shell](https://github.com/sun-zheng-an/gulp-shell)
 - [gulp-sequence](https://github.com/teambition/gulp-sequence)
 - [Visual Studio Code](https://code.visualstudio.com/)
