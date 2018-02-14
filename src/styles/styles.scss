@@ -103,3 +103,20 @@ nav {
     background: $img-grey;
     border: none;
 }
+
+// Image zoom top corner button
+
+.img-wrapper {
+    position: relative;
+    .zoom-btn {
+        text-align: center;
+        padding: 5px;
+        color: white;
+        margin: 15px;
+        border: 1px solid white;
+        width: 40px;
+        font-size: 1.2em;
+        position: absolute;
+        right: 0;
+    }
+}
