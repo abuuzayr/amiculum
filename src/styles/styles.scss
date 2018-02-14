@@ -38,9 +38,6 @@ main {
     .white-bg {
         background: white;
     }
-    section, nav {
-        width: $boxed-width;
-    }
     section + section {
         margin-top: 50px;
     }
@@ -151,4 +148,16 @@ nav {
     .img-half {
         background: $bo-img-grey;
     }
+}
+
+// Responsive media queries
+
+@media screen and (min-width: $boxed-width) {
+
+    main {
+        section, nav {
+            width: $boxed-width;
+        }
+    }
+    
 }
