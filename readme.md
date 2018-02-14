@@ -40,18 +40,18 @@ Developers
 There are 2 ways to trace the paths taken when building this site:
 
 - via commit messages - micro-commit method was preferred for this purpose
-- via comments in code - `gulp-strip-comments` removes comments in code, so please refer to the comments in this repository and not in the source code in the browser
+- via comments in code - `gulp-decomment` removes comments in the HTML markup, so please refer to the comments in this repository and not in the source code in the browser
 
 Testing
 -------
 
-Desktop browser testing was done on the latest versions of 
+Desktop browser testing to be done on the latest versions of 
 
 - Chrome (Windows & Mac)
 - Firefox (Windows & Mac)
 - Microsoft Edge (Windows)
 
-Mobile device testing was done on
+Mobile device testing to be done on
 
 - Chrome (iOS & Android)
 - Safari (iOS)
