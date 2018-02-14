@@ -11,6 +11,7 @@ var autoprefixer    = require('gulp-autoprefixer');
 var decomment       = require('gulp-decomment');
 var gulpSequence    = require('gulp-sequence');
 var shell           = require('gulp-shell');
+var htmlmin         = require("gulp-htmlmin");
 
 // BrowserSync configuration
 
@@ -153,6 +154,9 @@ gulp.task('html-prod', function() {
 
         // strip all comments
         .pipe(decomment({trim: true}))
+        
+        // minify html
+        .pipe(htmlmin({collapseWhitespace: true}))
 
         // stream files to dist folder        
         .pipe(gulp.dest('dist'))
