@@ -32,3 +32,22 @@ h1 {
 main {
     width: 960px;
 }
+
+// Navbar styles
+
+nav {
+    color: white;
+
+    .navbar-brand {
+        padding: 15px 25px;
+        background: $img-grey;
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
+
+    .brand-name {
+        letter-spacing: 3px;
+    }
+}
